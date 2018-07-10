@@ -137,6 +137,12 @@ strong
 .js-flex--start
 	flexStart()
 	justify-content center
+	margin 20px 0
+	&.second
+		.js-information__left
+			order 2
+		.js-information__right
+			order 1
 .js-height
 	height 100vh
 .js-container
@@ -247,6 +253,40 @@ strong
 		line-height 18px
 		font-family $regular
 		font-weight 100
+#home
+	overflow hidden
+	padding 0
+	position relative
+	height 100vh
+	.owl-carousel
+		relative()
+		height 100vh
+		width 100%
+		z-index 2
+		.owl-item
+			height 100vh
+			.item
+				height 100vh
+				.fondo-responsive
+					position absolute
+					top 0
+					right 0
+					bottom 0
+					left 0
+					background-size cover !important
+					&.fondo1
+						background url(../img/fondo/fondo1.jpg) no-repeat center center
+					&.fondo2
+						background url(../img/fondo/fondo2.jpg) no-repeat center center
+					&.fondo3
+						background url(../img/fondo/fondo3.jpg) no-repeat center center
+					&:BEFORE
+						absolute()
+						content ''
+						background-color #000000
+						z-index 0
+						height 100vh
+						opacity .4
 .js-button
 	background-color $default !important
 	text-decoration none !important
@@ -311,7 +351,6 @@ footer
 	color #FFFFFF
 	p
 		font-size 14px
-/*BOOTSTRAP4*/
 .navbar-default
 	transitionAll()
 	margin 0
@@ -320,14 +359,17 @@ footer
 	border-radius 0
 	position fixed
 	width 100%
-	background-color #000000
+	background-color #FFFFFF
 	z-index 10
 	.navbar-nav
+		text-align center
 		&>li
 			&>a
-				color #FFFFFF !important
+				color #000000
 				font-size 18px
 				background-color transparent !important
+	&.navbarcolor
+		box-shadow 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
 .navbar-brand
 	padding 0
 	position relative
@@ -339,7 +381,7 @@ footer
 		color #FFFFFF
 	img
 		transitionMaxWidth()
-		max-width 40px
+		max-width 25px
 .nav-tabs
 	border none
 	&>li
@@ -352,15 +394,22 @@ footer
 				font-family $bold				
 /*CLASES PROYECTO*/
 .js-contenido
+	absolute()
+	flexCenter()
+	flex-direction column
+	justify-content center
+	z-index 10
 	text-align center
 	color #FFFFFF
 	max-width 650px
+	margin auto
 	h2
 		font-size 50px
 		line-height 50px
 		font-family $bold
 	p
 		font-size 32px
+		line-height 32px
 		margin-bottom 20px
 .js-information
 	padding 20px 0
@@ -378,17 +427,19 @@ footer
 	justify-content flex-start
 	position relative
 	width 100%
-	height 200px
-	max-width 225px
+	height 250px
+	max-width 500px
 	.js-information__left--imagen
 		absolute()
-		background url(../img/fondo/hotel.jpg) no-repeat center center
-		background-size cover
-		height 160px
+		background url(../img/fondo/mision.jpg) no-repeat center center
+		background-size cover !important
+		height 250px
+		&.one
+			background url(../img/fondo/vision.png) no-repeat center center
 .js-information__right
-	padding 10px 20px
+	padding 10px 25px
 	width 100%
-	max-width calc(100% - 225px)
+	max-width calc(100% - 500px)
 	p
 		margin 5px 0
 .js-card
@@ -441,6 +492,39 @@ footer
 .mdl-card
 .mdl-card__supporting-text
 	width 100%
+	h2
+		font-size 24px
+		text-align center
+		color #757575
+		margin 5px 0
+.mdl-card
+	display block
+	max-width 300px
+	margin 20px
+	.mdl-card__title
+		relative()
+		height 200px
+		background-size cover !important
+		&.principal1
+			background url(../img/espacios/recepcion.jpg) no-repeat center center
+		&.principal2
+			background url(../img/espacios/sala.jpg) no-repeat center center
+		&.principal3
+			background url(../img/espacios/cofee.jpg) no-repeat center center
+		&.principal4
+			background url(../img/espacios/cofee2.jpg) no-repeat center center
+		&.secundario1
+			background url(../img/espacios/dealroom.jpg) no-repeat center center
+		&.secundario2
+			background url(../img/espacios/waitingroom.jpg) no-repeat center center
+		&.secundario3
+			background url(../img/espacios/cowork.jpg) no-repeat center center
+		&.secundario4
+			background url(../img/espacios/cowork2.jpg) no-repeat center center
+		&.secundario5
+			background url(../img/espacios/sshh.jpg) no-repeat center center
+		&.secundario6
+			background url(../img/espacios/lectura.jpg) no-repeat center center
 /*MODAL*/
 .modal
 	&.fade
@@ -496,24 +580,45 @@ table
 @media (min-width: 768px)
 	.navbar
 		background-color transparent
+		.navbar-nav
+			&>li
+				&>a
+					color #FFFFFF
+					&:hover
+						color #FFFFFF
 		&.navbarcolor
-			background-color #000000
+			background-color #FFFFFF
 			.navbar-brand
 				img
-					max-width 45px
+					max-width 25px
+			.navbar-nav
+				&>li
+					&>a
+						color #000000
 	.navbar-brand
 		img
-			max-width 65px
+			max-width 45px
 @media (max-width: 1000px)
 	.navbar-brand
 		small
 			display none
+	.js-information__left
+		max-width 300px
+	.js-information__right
+		max-width calc(100% - 300px)
 @media (max-width: 600px)
 	.navbar-brand
 		small
 			display none	
-	#hotel
-		.js-flex--start
-			display block
-		.js-information__right
-			max-width 100%	
+	.js-flex--start
+		display block
+	.js-information__left
+		max-width 100%
+	.js-information__right
+		max-width 100%
+		padding 20px 0	
+	.js-contenido
+		padding 40px 20px
+		h2
+			font-size 42px
+			line-height 42px

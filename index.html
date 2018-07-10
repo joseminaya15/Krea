@@ -17,6 +17,8 @@
     <link rel="stylesheet"    href="public/plugins/bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="public/plugins/bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="public/plugins/datetimepicker/css/bootstrap-material-datetimepicker.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="public/plugins/owl-carousel/owl.theme.default.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="public/plugins/owl-carousel/owl.carousel.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="public/fonts/font-awesome.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="public/fonts/material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="public/fonts/metric.css?v=<?php echo time();?>">
@@ -40,7 +42,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item active"><a class="link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="link" href="#home">Inicio</a></li>
                     <li class="nav-item"><a class="link" href="#nosotros">Nosotros</a></li>
                     <li class="nav-item"><a class="link" href="#espacios">Espacios</a></li>
                     <li class="nav-item"><a class="link" href="#contactanos">Cont&aacute;ctanos</a></li>
@@ -49,9 +51,18 @@
         </div>
     </nav>
     <section id="home">
-        <div class="js-fondo"></div>
-        <div class="js-container">
-            <div class="js-home js-height js-flex">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="fondo-responsive fondo1"></div>
+                <div class="js-contenido">
+                    <h2>Krea es un espacio colaborativo y creativo para emprendedores.</h2>
+                    <div class="js-contenido__buttons">
+                        <a href="#contactanos" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect link js-button">CONT&Aacute;CTANOS  AHORA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fondo-responsive fondo2"></div>
                 <div class="js-contenido">
                     <h2>M&aacute;s que un espacio de trabajo,</h2>
                     <p>un lugar de inspiraci&oacute;n</p>
@@ -60,16 +71,142 @@
                     </div>
                 </div>
             </div>
+            <div class="item">
+                <div class="fondo-responsive fondo3"></div>
+                <div class="js-contenido">                    
+                    <h2>Creamos un entorno que mejorar&aacute;</h2>
+                    <p>tu productividad, innovaci&oacute;n y colaboraci&oacute;n.</p>
+                    <div class="js-contenido__buttons">
+                        <a href="#contactanos" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect link js-button">CONT&Aacute;CTANOS  AHORA</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="nosotros" class="js-section js-white">
+    <section id="nosotros" class="js-section">
         <div class="js-container">
             <h2 class="js-title">Nosotros</h2>
+            <div class="js-information">
+                <div class="js-flex--start">
+                    <div class="js-information__left">
+                        <div class="js-information__left--imagen"></div>
+                    </div>
+                    <div class="js-information__right">
+                        <h2>Misi&oacute;n</h2>
+                        <p>Ser la empresa de arquitectura de interiores reconocido por transformar tus aspiraciones optimizando 
+                        espacios con propuestas innovadoras.</p>
+                    </div>
+                </div>
+                <div class="js-flex--start second">
+                    <div class="js-information__left">
+                        <div class="js-information__left--imagen one"></div>
+                    </div>
+                    <div class="js-information__right">
+                        <h2>Visi&oacute;n</h2>
+                        <p>Innovar y transformar tu vida a trav&eacute;s de espacios, creando sensaciones para una 
+                        experiencia &uacute;nica.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="espacios" class="js-section js-white">
         <div class="js-container">
             <h2 class="js-title">Nuestros Espacios</h2>
+            <div class="js-subtitle">
+                <h3>Espacio Principal</h3>
+            </div>
+            <div class="js-espacio--principal">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title principal1"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Recepci&oacute;n</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title principal2"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Sala Coworking</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title principal3"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Coffee - Kitchenette</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title principal4"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Coffee - Kitchenette</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="js-subtitle">
+                <h3>Espacio Secundario</h3>
+            </div>
+            <div class="js-espacio--secundario">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title secundario1"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Deal Room</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title secundario2"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Waiting Room</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title secundario3"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Cowork Arqu / D.G KREA</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title secundario4"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Cowork Arqu / D.G KREA</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title secundario5"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>SS.HH Discapacitados</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mdl-card">
+                            <div class="mdl-card__title secundario6"></div>
+                            <div class="mdl-card__supporting-text">
+                                <h2>Zona de Lectura KREA</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="contactanos" class="js-section js-white">
@@ -90,6 +227,7 @@
     <script src="public/plugins/mdl/material.min.js?v=<?php echo time();?>"></script>
     <script src="public/plugins/moment/moment.min.js?v=<?php echo time();?>"></script>
     <script src="public/plugins/datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
+    <script src="public/plugins/owl-carousel/owl.carousel.min.js?v=<?php echo time();?>"></script>
     <script src="public/plugins/toaster/toastr.js?v=<?php echo time();?>"></script>
     <script src="public/js/jsmenu.js?v=<?php echo time();?>"></script>
     <script src="public/js/jsindex.js?v=<?php echo time();?>"></script>
